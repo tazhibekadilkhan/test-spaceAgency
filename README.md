@@ -46,3 +46,9 @@ php artisan passport:install
    PASSPORT_CLIENT_ID=
    PASSPORT_CLIENT_SECRET=
 ```
+
+## 10. Запустить тесты
+
+```
+php artisan test
+```
