@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "2949d2ba-06d4-4ec8-8a16-5e6c8a4be9e0",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26623635",
+		"_collection_link": "https://www.postman.com/lunar-firefly-837195/workspace/lms/collection/26623635-2949d2ba-06d4-4ec8-8a16-5e6c8a4be9e0?action=share&source=collection_link&creator=26623635"
+	},
+	"item": [
+		{
+			"name": "statuses",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/statuses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"statuses"
+							],
+							"query": [
+								{
+									"key": "admin",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/statuses/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"statuses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "status 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/statuses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"statuses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "AAAA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/statuses/2?name=status2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"statuses",
+								"2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "status2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/statuses/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"statuses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "priorities",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities"
+							],
+							"query": [
+								{
+									"key": "admin",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "priority 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities/1?name=pr 1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "pr 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks?date=09.05.2024&status_id=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "09.05.2024"
+								},
+								{
+									"key": "status_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "priority 1",
+									"type": "text"
+								},
+								{
+									"key": "deadline",
+									"value": "25.05.2024",
+									"type": "text"
+								},
+								{
+									"key": "priority_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities/1?name=name 1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "name 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priorities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Adeke",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "adeke@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "adeke@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZGVlOTAzZGYxYjE2NWEyNGJiNmIxY2NkNWU4MDUxY2UzYWIxNWJjYjA4MDM1OGQ5MGQzOTM4OWJhZGQ2ZTYxMDQ1MDBkMzVlN2I3YmQzN2MiLCJpYXQiOjE3MTUyODQzNDcuNTgwNzk3LCJuYmYiOjE3MTUyODQzNDcuNTgwODAyLCJleHAiOjE3MTUzNzA3NDcuNTI5OTM0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.nAdiqopfpzTIoKcwKYNBt8OT8XjQbswfqF5KL7dVN8pu5WbbvAu4mlz3zao1LxpS0bLVkXf6v-9U-tqdIOd6S_fdtVR9vLw92kONVltpP1d9kSBqZopTr1t6qGXxBXhkePam5SP2zzII4IQmWXHWEb4prT8oIt9mMvyfQkDL9rj7UNF_nTy165fRYH8336hnnHhY64XbvTWFp7MkiEz_A4gjaYME-FFgF8Xl9WNsB59DabddwDAquH7Bu3zxRAPXBcvN0KzxePLmX3-Wmxw3wT9lfldJySfsoK853-dQLmmrqeX_TVvDixp71OIjPeOi-25W36ostL19bUNvh7c-PRrHBnEuUfUvrzzd04sRXzYvrtprTPUxnv_G_skcecwcmyFHB9erH1N90NtRDjVL1UCw91R5JXbaiZTK31Gdmif-NXWOAnD1mimkWCzbHFwkRLaAp9mvlhM9UlyPhCGaYgpU0UHcrX9AXtQA41hLV1p34rUEn0tIXXHZkgSHKtOtE2ezv4wCEci0PMEiqMdcIKeX3zjaUxia9g1Il9PUB4V_UKDoGWnyezN0WIKlyE9qI4EvbDwigY1_rTA_zoHm5RPNJZRVfNS8NVEpbWCE8bq7lh9Qw5S_Csa3BIKMREgUqqI8U19mf-reU9qzGtojPpHLqGvL5H4_SzFxvLTcqsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "adeke@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZGVlOTAzZGYxYjE2NWEyNGJiNmIxY2NkNWU4MDUxY2UzYWIxNWJjYjA4MDM1OGQ5MGQzOTM4OWJhZGQ2ZTYxMDQ1MDBkMzVlN2I3YmQzN2MiLCJpYXQiOjE3MTUyODQzNDcuNTgwNzk3LCJuYmYiOjE3MTUyODQzNDcuNTgwODAyLCJleHAiOjE3MTUzNzA3NDcuNTI5OTM0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.nAdiqopfpzTIoKcwKYNBt8OT8XjQbswfqF5KL7dVN8pu5WbbvAu4mlz3zao1LxpS0bLVkXf6v-9U-tqdIOd6S_fdtVR9vLw92kONVltpP1d9kSBqZopTr1t6qGXxBXhkePam5SP2zzII4IQmWXHWEb4prT8oIt9mMvyfQkDL9rj7UNF_nTy165fRYH8336hnnHhY64XbvTWFp7MkiEz_A4gjaYME-FFgF8Xl9WNsB59DabddwDAquH7Bu3zxRAPXBcvN0KzxePLmX3-Wmxw3wT9lfldJySfsoK853-dQLmmrqeX_TVvDixp71OIjPeOi-25W36ostL19bUNvh7c-PRrHBnEuUfUvrzzd04sRXzYvrtprTPUxnv_G_skcecwcmyFHB9erH1N90NtRDjVL1UCw91R5JXbaiZTK31Gdmif-NXWOAnD1mimkWCzbHFwkRLaAp9mvlhM9UlyPhCGaYgpU0UHcrX9AXtQA41hLV1p34rUEn0tIXXHZkgSHKtOtE2ezv4wCEci0PMEiqMdcIKeX3zjaUxia9g1Il9PUB4V_UKDoGWnyezN0WIKlyE9qI4EvbDwigY1_rTA_zoHm5RPNJZRVfNS8NVEpbWCE8bq7lh9Qw5S_Csa3BIKMREgUqqI8U19mf-reU9qzGtojPpHLqGvL5H4_SzFxvLTcqsM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYTk2MDRkMzg4OGI2ZDBjYTYxYWIzMGJiM2VhZTdiNDE1ZTYwNDBmZWQxYjIxZTAyMzI2M2MxM2U1MWI3NjdkZTExNWY5OGQ3NWQ1MWVlZWMiLCJpYXQiOjE3MTUyOTg4MDQuNjg5MDAzLCJuYmYiOjE3MTUyOTg4MDQuNjg5MDA1LCJleHAiOjE3MTUzODUyMDQuNjEzMjg2LCJzdWIiOiI1Iiwic2NvcGVzIjpbIioiXX0.Q1qOyoEcrBCRhlsf2BA4dEZoihwcW3buDB5wPTlObroMaor7CAzxffJuQPIwJIwIiOBYTUintOOAr1Ye3ZVbNAUYlq3uAVCgHIResa7LKVjvzHjzhiT5RKADuKzoMp7a3mFFdUcwmalZ8qTZHiV774-rcEO9Pw8WAQa2NfjNqJKJCZoIqGEYBRm2e4Y6wRxS5EQsT-uJh9_KkjefGEQ-bfQah7Msn8LlgNU8ZoKvkHeb47IJngB-YrNuCu-W-dw3oFWkCEIh2Tm1XaS2C5Z-X-59JBlQ_9SKQ18iHrMYO4fXiDki_bizc8okvcs_HYJAt3vN-5z7S3L13EhNFpnTN41G0IERou-gTjeQ5WZtqPPSPs_AlpiJq5t7TrRCynQwtIHvc1rKiO2Mnpt0AUogemyrAurKlDbSk4x8GIE5ZR9Hm3bZDCHA2Ivo94DQoqNBfWjJMrqUIgislLMnwT9150VHs3NHiJsZZ0SSFigRBjCd8B3Yw0hNx6rc9RMiuAz3WYl5fxgUp9CujFylRmM1JpOV6y5GqUUYBIhD48JXxMoMtsQlPYr5cocfsx3GAvPK-FDYQ0Ds1qunNRN5U1N3Hm17bujIsdVOkLKP93mu9NHkgxDosn0YkFIbOXj8ACD4QCB80JJghh8lT55gMVU9uYAnC_8zM25XlMHO-DM-LUs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
