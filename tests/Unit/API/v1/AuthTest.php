@@ -19,32 +19,26 @@ class AuthTest extends TestCase
             'password' => bcrypt('password'),
         ]);
 
-        // Отправляем запрос на вход с правильными учетными данными
         $data = [
-            'grant_type' => 'password',
-            'client_id' => env('PASSPORT_CLIENT_ID'),
-            'client_secret' => env('PASSPORT_CLIENT_SECRET'),
-            'username' => 'test@example.com',
+            'email' => 'test@example.com',
             'password' => 'password',
-            'scope' => '',
         ];
 
         // Отправляем запрос на получение токена доступа
-        $response = $this->postJson('/oauth/token', $data);
+        $response = $this->postJson('/api/v1/login', $data);
 
         // Проверяем, что запрос был успешным
         $response->assertStatus(200);
 
         // Проверяем наличие данных о пользователе и токена доступа в ответе
         $response->assertJsonStructure([
-            'access_token',
-            'token_type',
-            'expires_in',
-        ]);
-
-        // Проверяем, что токен доступа был успешно создан для пользователя
-        $this->assertDatabaseHas('oauth_access_tokens', [
-            'user_id' => $user->id,
+            'data' => [
+                'user',
+                'authorization' => [
+                    'type',
+                    'access_token'
+                ],
+            ]
         ]);
     }
 

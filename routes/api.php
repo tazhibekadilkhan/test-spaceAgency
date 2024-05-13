@@ -25,7 +25,7 @@ Route::group(['middleware' => ['api']], function () {
         Route::post('register', [AuthController::class, 'register']);
 
         Route::resource('tasks', TaskController::class)->middleware('auth:api');
-        Route::resource('statuses', StatusController::class);
-        Route::resource('priorities', PriorityController::class);
+        Route::resource('statuses', StatusController::class)->middleware('auth:api');
+        Route::resource('priorities', PriorityController::class)->middleware('auth:api');
     });
 });

@@ -5,11 +5,9 @@ namespace App\Http\Controllers\API\v1;
 use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Http\Requests\v1\Auth\LoginRequest;
 use App\Http\Requests\v1\Auth\RegisterRequest;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
@@ -22,39 +20,24 @@ class AuthController extends Controller
     {
         $credentials = $request->validated();
 
-        if (!Auth::guard('web')->attempt($credentials))
-            return response()->json([
-                'errors' => array(array('Введенные Вами данные неверены'))
-            ], 401);
-
-        $user = Auth::guard('web')->user();
-
         try {
 
-            $client = DB::table('oauth_clients')
-                ->where('password_client', true)
-                ->first();
+            $token = Auth::attempt($credentials);
 
-            $data = [
-                'grant_type' => 'password',
-                'client_id' => $client->id,
-                'client_secret' => $client->secret,
-                'username' => $credentials['email'],
-                'password' => $credentials['password'],
-                'scope' => '*'
-            ];
-
-            $response = Http::asForm()->post(env('APP_URL'). '/oauth/token', $data);
-            $response = $response->json();
-
-            if (!isset($response['access_token'])) {
-                return response()->json(['error' => 'Ошибка при получении токена'], 500);
+            if (!$token) {
+                return response()->json([
+                    'error' => 'Введенные Вами данные неверены',
+                ], 401);
             }
 
-            $response['user'] = $user;
-
             return response()->json([
-                'data' => $response
+                'data' => [
+                    'user' => Auth::user(),
+                    'authorization' => [
+                        'access_token' => $token,
+                        'type' => 'bearer',
+                    ]
+                ]
             ]);
 
         } catch (\Exception $e) {
@@ -94,7 +77,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        Auth::user()->token()->revoke();
+        Auth::logout();
         return response()->json(['message' => 'Пользователь успешно вышел из системы.']);
     }
 

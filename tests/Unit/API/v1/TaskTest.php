@@ -245,20 +245,15 @@ class TaskTest extends TestCase
 
     private function getAccessToken()
     {
-        // Подготовка данных для запроса на получение токена доступа
         $data = [
-            'grant_type' => 'password',
-            'client_id' => env('PASSPORT_CLIENT_ID'),
-            'client_secret' => env('PASSPORT_CLIENT_SECRET'),
-            'username' => 'test@example.com',
+            'email' => 'test@example.com',
             'password' => 'password',
-            'scope' => '',
         ];
 
-        // Отправка запроса на получение токена доступа
-        $response = $this->postJson('/oauth/token', $data);
+        // Отправляем запрос на получение токена доступа
+        $response = $this->postJson('/api/v1/login', $data);
 
         // Извлечение токена доступа из ответа и возврат его
-        return $response->json()['access_token'];
+        return $response->json()['data']['authorization']['access_token'];
     }
 }
