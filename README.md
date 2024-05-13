@@ -1,6 +1,6 @@
 ## 1. Если необходимо, отредактируйте пути в файле `/docker/app/docker-compose.yml`.
 
-## 2. Перейдите в директорию `docker/app` и выполните следующие команды:
+## 2. Перейдите в директорию docker/app и выполните следующие команды:
    ``` 
    docker-compose build 
    docker-compose up -d
@@ -37,18 +37,11 @@ c641f3a91181   nginx:1.13-alpine      "nginx -g 'daemon of…"   10 hours ago   
 php artisan migrate
 ```
 
-## 8.запустить команду
-```
-php artisan passport:install
- ```
-## 9. редактировать .env данные Password grant client-а
-``` 
-   PASSPORT_CLIENT_ID=
-   PASSPORT_CLIENT_SECRET=
-```
-
-## 10. Запустить тесты
+## 8.запустить команду тест
 
 ```
 php artisan test
 ```
+
+
+
