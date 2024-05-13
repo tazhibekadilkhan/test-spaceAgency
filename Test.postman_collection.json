@@ -22,7 +22,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/statuses",
+							"raw": "http://127.0.0.1:8888/api/v1/statuses",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -30,7 +30,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -59,7 +59,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/statuses/1",
+							"raw": "http://127.0.0.1:8888/api/v1/statuses/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -67,7 +67,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -100,7 +100,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/statuses",
+							"raw": "http://127.0.0.1:8888/api/v1/statuses",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -108,7 +108,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -131,7 +131,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/statuses/2?name=status2",
+							"raw": "http://127.0.0.1:8888/api/v1/statuses/2?name=status2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -139,7 +139,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -168,7 +168,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/statuses/2",
+							"raw": "http://127.0.0.1:8888/api/v1/statuses/2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -176,7 +176,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -204,7 +204,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -212,7 +212,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -241,7 +241,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -249,7 +249,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -282,7 +282,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -290,7 +290,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -312,7 +312,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities/1?name=pr 1",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities/1?name=pr 1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -320,7 +320,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -349,7 +349,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -357,7 +357,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -385,7 +385,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/tasks?date=09.05.2024&status_id=1",
+							"raw": "http://127.0.0.1:8888/api/v1/tasks?date=09.05.2024&status_id=1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -393,7 +393,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -425,7 +425,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/tasks/1",
+							"raw": "http://127.0.0.1:8888/api/v1/tasks/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -433,7 +433,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -481,7 +481,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/tasks",
+							"raw": "http://127.0.0.1:8888/api/v1/tasks",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -489,7 +489,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -511,7 +511,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities/1?name=name 1",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities/1?name=name 1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -519,7 +519,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -548,7 +548,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/priorities/1",
+							"raw": "http://127.0.0.1:8888/api/v1/priorities/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -556,7 +556,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -609,7 +609,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/register",
+							"raw": "http://127.0.0.1:8888/api/v1/register",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -617,7 +617,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -654,7 +654,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/login",
+							"raw": "http://127.0.0.1:8888/api/v1/login",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -662,7 +662,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -709,7 +709,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/logout",
+							"raw": "http://127.0.0.1:8888/api/v1/logout",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -717,7 +717,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
@@ -762,7 +762,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8080/api/v1/profile",
+							"raw": "http://127.0.0.1:8888/api/v1/profile",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -770,7 +770,7 @@
 								"0",
 								"1"
 							],
-							"port": "8080",
+							"port": "8888",
 							"path": [
 								"api",
 								"v1",
