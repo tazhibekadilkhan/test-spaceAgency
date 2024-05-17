@@ -13,6 +13,7 @@ class CommentController extends Controller
     public function __construct(CommentService $service)
     {
         $this->service = $service;
+        $this->middleware('auth:api')->except('index', 'show');
     }
 
     public function index()
@@ -37,6 +38,7 @@ class CommentController extends Controller
 
     public function update(CommentRequest $request, Comment $comment)
     {
+        $this->authorize('update', $comment);
         return $this->service->update($comment, $request->validated());
     }
 

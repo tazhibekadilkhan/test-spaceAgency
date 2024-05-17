@@ -20,13 +20,21 @@ class PostRepository extends BaseRepository
     {
         return $this->model
             ->with($relations)
-            ->where('user_id', Auth::id())
             ->when(
                 request('category_id'),
                 function ($query) {
                     $query->where(
                         'category_id',
                         request('category_id')
+                    );
+                }
+            )
+            ->when(
+                request('show_my_post'),
+                function ($query) {
+                    $query->where(
+                        'user_id',
+                        Auth::id()
                     );
                 }
             )

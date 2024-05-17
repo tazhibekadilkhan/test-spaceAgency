@@ -13,6 +13,7 @@ class PostController extends Controller
     public function __construct(PostService $service)
     {
         $this->service = $service;
+        $this->middleware('auth:api')->except('index', 'show');
     }
 
     public function index()
@@ -37,6 +38,7 @@ class PostController extends Controller
 
     public function update(PostRequest $request, Post $post)
     {
+        $this->authorize('update', $post);
         return $this->service->update($post, $request->validated());
     }
 

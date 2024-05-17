@@ -20,6 +20,8 @@ class User extends Authenticatable implements JWTSubject
      */
     protected $fillable = UserConstant::FILLABLE;
 
+    protected $with = ['roles'];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -63,8 +65,12 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
-    public function roles()
+    public function roles(){
+        return $this->belongsToMany(Role::class, 'user_role', 'user_id', 'role_id');
+}
+
+    public function role()
     {
-        return $this->hasMany(Role::class);
+        return $this->belongsTo(Role::class);
     }
 }

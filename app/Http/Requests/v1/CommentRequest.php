@@ -21,7 +21,8 @@ class CommentRequest extends FormRequest
         return [
             'content' => ['required', 'string', 'min:3', 'max:255'],
             'comment_id' => ['exists:comments,id'],
-            'user_id' => [],
+            'post_id' => ['exists:posts,id'],
+            'user_id' => [''],
         ];
     }
 }

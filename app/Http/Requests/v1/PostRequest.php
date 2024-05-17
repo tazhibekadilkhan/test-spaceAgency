@@ -21,16 +21,9 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'description' => [''],
-            'user_id' => [''],
+            'name' => ['required', 'max:250'],
+            'description' => ['min:500', 'max:1000'],
             'category_id' => ['required', 'exists:categories,id'],
         ];
     }
-
-//    protected function passedValidation()
-//    {
-//        $data = $this->validator->getData();
-//        $this->validator->setData(['user_id' => Auth::id()] + $data);
-//    }
 }

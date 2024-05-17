@@ -32,16 +32,19 @@ class CategoryController extends Controller
 
     public function store(CategoryRequest $request)
     {
+        $this->authorize('create', Category::class);
         return $this->service->store($request->validated());
     }
 
     public function update(CategoryRequest $request, Category $category)
     {
+        $this->authorize('update', $category);
         return $this->service->update($category, $request->validated());
     }
 
     public function destroy(Category $category)
     {
+        $this->authorize('update', $category);
         return $this->service->destroy($category);
     }
 }

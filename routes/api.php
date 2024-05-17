@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\API\v1\AuthController;
+use App\Http\Controllers\API\v1\CategoryController;
+use App\Http\Controllers\API\v1\CommentController;
+use App\Http\Controllers\API\v1\PostController;
 use App\Http\Controllers\API\v1\PriorityController;
 use App\Http\Controllers\API\v1\StatusController;
 use App\Http\Controllers\API\v1\TaskController;
@@ -24,8 +27,8 @@ Route::group(['middleware' => ['api']], function () {
         Route::get('profile', [AuthController::class, 'profile'])->middleware('auth:api');
         Route::post('register', [AuthController::class, 'register']);
 
-        Route::resource('tasks', TaskController::class)->middleware('auth:api');
-        Route::resource('statuses', StatusController::class)->middleware('auth:api');
-        Route::resource('priorities', PriorityController::class)->middleware('auth:api');
+        Route::resource('categories', CategoryController::class);
+        Route::resource('posts', PostController::class);
+        Route::resource('comments', CommentController::class)->middleware('auth:api');
     });
 });

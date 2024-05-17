@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
 
             $moderator = User::factory()->create([
                 'name' => 'Moderator User',
+                'email' => 'moderator@test.com',
                 'password' => bcrypt('password')
             ]);
 
