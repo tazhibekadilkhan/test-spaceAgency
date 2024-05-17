@@ -43,5 +43,11 @@ php artisan migrate
 php artisan db:seed
 ```
 
+## 9.перейти к
+
+```
+http://localhost:8888/
+```
+
 
 
