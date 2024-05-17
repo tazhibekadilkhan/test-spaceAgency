@@ -2,9 +2,9 @@
 
 namespace App\Constants;
 
-class StatusConstant
+class CategoryConstant
 {
-    public const TABLE_NAME = 'statuses';
+    public const TABLE_NAME = 'categories';
 
     public const FIELD_ID = 'id';
     public const FIELD_NAME = 'name';

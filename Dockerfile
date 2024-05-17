@@ -6,7 +6,4 @@ RUN docker-php-ext-install zip pdo_pgsql pdo_mysql bcmath bz2
 RUN curl --silent --show-error "https://getcomposer.org/installer" | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require "laravel/envoy=~1.0"
 RUN chown -R www-data:www-data /var/www
-#RUN useradd -ms /bin/bash adilkhan
-#USER adilkhan
-#WORKDIR /home/adilkhan
 

@@ -4,13 +4,13 @@
 namespace App\Repositories;
 
 
-use App\Models\Task;
+use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
-class TaskRepository extends BaseRepository
+class PostRepository extends BaseRepository
 {
-    public function __construct(Task $model)
+    public function __construct(Post $model)
     {
         $this->model = $model;
         $this->sortBy = 'updated_at';
@@ -22,20 +22,11 @@ class TaskRepository extends BaseRepository
             ->with($relations)
             ->where('user_id', Auth::id())
             ->when(
-                request('status_id'),
+                request('category_id'),
                 function ($query) {
                     $query->where(
-                        'status_id',
-                        request('status_id')
-                    );
-                }
-            )
-            ->when(
-                request('priority_id'),
-                function ($query) {
-                    $query->where(
-                        'priority_id',
-                        request('priority_id')
+                        'category_id',
+                        request('category_id')
                     );
                 }
             )
