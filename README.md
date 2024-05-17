@@ -37,10 +37,10 @@ c641f3a91181   nginx:1.13-alpine      "nginx -g 'daemon of…"   10 hours ago   
 php artisan migrate
 ```
 
-## 8.запустить команду тест
+## 8.запустить команду seed
 
 ```
-php artisan test
+php artisan db:seed
 ```
 
 
